@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <form>
+      <input type="file">
+      <br>
+      <br>
+      <button type="submit">Submit</button>
+      <br>
+      <br>
+      <div>Status: <span></span></div>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+    <script>
+      var form = document.querySelector('form');
+      var input = document.querySelector('input');
+      var span = document.querySelector('span');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var formData = new FormData();
+        formData.append('image', input.files[0]);
+
+        axios.put('http://localhost:3000/upload', formData)
+          .then(function () {
+            span.innerHTML = 'SUCCESS';
+          })
+          .catch(function () {
+            span.innerHTML = 'FAILURE';
+          });
+      });
+    </script>
+  </body>
+</html>
