@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js & npx cypress open"
+    "run": "node server.js & npx cypress run --spec cypress/integration/intercept.js"
   },
   "author": "Alexander Yachinkovsky <alexander.csr@gmail.com> (http://verstka.pro/)",
   "license": "ISC",
   "dependencies": {
     "@koa/multer": "^3.0.0",
     "@koa/router": "^10.0.0",
-    "cypress": "^6.0.0",
+    "cypress": "6.2.1",
     "cypress-file-upload": "^4.1.1",
     "fs": "0.0.1-security",
     "koa": "^2.13.0",

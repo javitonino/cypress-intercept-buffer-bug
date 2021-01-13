@@ -1,0 +1,21 @@
+{
+  "name": "cy_intercept_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node server.js & npx cypress run --spec cypress/integration/intercept.js"
+  },
+  "author": "Alexander Yachinkovsky <alexander.csr@gmail.com> (http://verstka.pro/)",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/multer": "^3.0.0",
+    "@koa/router": "^10.0.0",
+    "cypress": "6.2.0",
+    "cypress-file-upload": "^4.1.1",
+    "fs": "0.0.1-security",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "multer": "^1.4.2"
+  }
+}

@@ -1,0 +1,15 @@
+ARG CYPRESS_VERSION
+
+FROM cypress/browsers:node14.7.0-chrome84
+WORKDIR /app
+
+COPY package6.2.0.json /app/package.json
+RUN npm install
+
+COPY cypress /app/cypress
+COPY uploads /app/uploads
+COPY server.js /app/server.js
+COPY index.html /app/index.html
+COPY cypress.json /app/cypress.json
+
+CMD npm run run
